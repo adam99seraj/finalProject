@@ -1,0 +1,305 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+body {
+  overflow-y: hidden; // hide vertical
+  overflow-x: hidden; // hide horizontal
+  width: 100%;
+  height: 500px;
+  background-image: url('https://farm3.static.flickr.com/2781/4017516484_9b257f566f_b.jpg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#catDiv {
+  margin: 40px 6% 0 6%;
+  text-align: center;
+  margin-top: 80px;
+}
+
+.cat {
+  display: inline-block;
+  width: 250px;
+  height: 250px;
+  box-sizing: border-box;
+  text-align: center;
+  overflow: hidden;
+}
+
+.cat img {
+  width: 90%;
+  height: 90%;
+}
+
+.cat:hover img {
+  position: static;
+  width: 150%;
+  height: 150%;
+  align-self: center;
+  margin: -25% 0 0 -25%;
+  transition: width linear 0.5s, height linear 0.5s, margin linear 0.5s;
+}
+
+.catOverlay {
+  position: relative;
+}
+
+.catOverlay:before{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 10%;
+  width: 10%;
+  opacity: 0;
+  content: "";
+}
+.catOverlay:hover:before{
+  opacity: .6;
+  background-color: #181818;
+  height: 100%;
+  width: 100%;
+  transition: background-color linear 0.5s, height linear 0.5s, width linear 0.5s;
+}
+
+.catOverlay:after{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 10%;
+  width: 10%;
+  opacity: 0;
+  content: "";
+}
+.catOverlay:hover:after{
+  opacity: .6;
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  transition: background-color linear 0.5s, height linear 0.5s, width linear 0.5s;
+}
+
+.catTitle {
+  position: absolute;
+  display: block;
+  color: black;
+  text-shadow: 5px 5px 10px black;
+  font-size: x-large;
+  left: 50%;
+  margin: -60% 0 0 -25%;
+  width: 50%;
+  height: auto;
+  z-index: 2;
+}
+
+.catHeading {
+  margin-top: 80px;
+  text-align: center;
+  font-weight: bolder;
+  font-size: 5em;
+  color: #eeeeee;
+}
+
+
+.button1{
+width: 100%;
+height: auto;
+text-align: center;
+margin-top: 80px;
+}
+
+button{
+  border-radius: 100%;
+  background-image: linear-gradient(white, blue);
+  border: none;
+  color: white;
+  padding: 27px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.contact_us{
+  position: relative;
+  background-color: #252626;
+  padding: 0px 0 0px 0;
+  overflow: hidden;
+  min-width: 300px;
+  height: 300px;
+  background-image: url(https://www.mercedes-benz.com/wp-content/uploads/sites/3/2018/08/01-mercedes-benz-trucks-2017-actros-1851-bm-963-3400x1440.jpg);
+  background-size: cover;
+  background-attachment:fixed;
+  background-position:right top;
+}
+.contact_us_fon{
+  background-color: #232424;
+  padding: 60px 0 0px 0;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  opacity: 0.8;
+}
+.contact_us_left{
+  display: inline-block;
+  margin: 0px 0px 0px 10%;
+  width: 40%;
+}
+.contact_us_big_text{
+  display: block;
+}
+.contact_us_big_text{
+  color: white;
+  font-size: 60px;
+  padding: 0px 5px 0px 5px;
+  text-transform: uppercase;
+  font-family: 'Fjalla One', sans-serif;
+}
+.red_text{
+  background-color: red;
+  padding: 0px 10px 0px 10px;
+}
+.contact_us_small_text{
+  color: white;
+  font-size: 15px;
+  margin: 10px 10px 10px 10px;
+  word-spacing: 5px;
+  font-family: 'Titillium Web', sans-serif;
+}
+
+
+.mail:before {font-family: FontAwesome;content: "\f015";}
+.phone_number:before {font-family: FontAwesome;content: "\f0e0";}
+.adress:before {font-family: FontAwesome;content: "\f095";}
+
+
+.contact_us_right{
+  display: inline-block;
+  margin: 0px 8% 0px 0;
+  width: 40%;
+  height: 200px;
+  position: absolute;
+  border-left: 1px solid #808080;
+}
+.contact_us_icons{
+  margin: 0px 0px 0px 20px;
+}
+.icon{
+  background-color: white;
+  display: inline-block;
+  margin: 0px 0px 0px 10px;
+  width: 50px;
+  height: 50px;
+  font-size: 25px;
+  text-align: center;
+  line-height: 1.9;
+  color:  #252626;
+  -webkit-transition:  0.9s;
+}
+.icon_facebook:before {font-family: FontAwesome; content: "\f09a";}
+.icon_twitter:before {font-family: FontAwesome; content: "\f099";}
+.icon_google_plus:before {font-family: FontAwesome; content: "\f0d5";}
+.icon_linkedin:before {font-family: FontAwesome; content: "\f0e1";}
+
+.zas1{
+  background-color: #232424;
+  padding: 30px 0 0 80px;
+  overflow: hidden;
+  height: 50px;
+  color: #696969;
+  font-family: 'Titillium Web', sans-serif;
+}
+.red_text_2{
+  padding: 0px 0 10px 0px;
+  color: red;
+}
+
+
+
+.icon:hover {
+ background-color: red;
+ color:  white;
+}
+
+A {
+  text-decoration: none;
+   color: red;
+}
+A:hover {
+  text-decoration: underline;
+  color: red;
+}
+@media screen and (min-width:300px) and (max-width:1300px) {
+  body{
+  overflow-y: visible;
+  overflow-x: visible;
+  }
+
+.contact_us{
+  min-width: 300px;
+}
+.contact_us_fon{
+  padding: 30px 0 0px 0;
+}
+.contact_us_left{
+  display: block;
+  width: 100%;
+  margin: 10px 0px 0px 60px;
+}
+.contact_us_big_text{
+  color: white;
+  font-size: 50px;
+}
+.contact_us_right{
+  display: block;
+  margin: 10px 0px 0px 40px;
+  border: none;
+  width: 100%;
+
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>slider</title>
+    <!--stil delen-->
+    <style >
+      #window{
+        height: 200px; width:250px;
+      }
+      #img{
+        display:flex;
+        position:relative;
+      }
+
+      .button{
+        display:none;
+        margin-left: 60px;
+      }
+      p{
+        margin-left:100px;
+      }
+
+    </style>
+  </head>
+  <body class="bodys">
+
+    <div id="window">
+      <div id="img">
+
+        <img src="bil1.jpg" >
+        <img src="bil2.jpg" >
+        <img src="bil3.jpeg" >
+
+      </div>
+    </div>
+    <p>No javascript</p>
+
+    <div class="button">
+
+      <button id="previous"> Previous </button>
+      <button id="next"> Next </button>
+
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script>
+    
+      $(document).ready(function(){
+
+      var  right=0;
+      var left=0;
+      var number = 1;
+      $("p").text(number + " av 3");
+
+
+
+
+        var foo = $('#img');
+        $(".button").show();
+        $("#window").css("overflow", "hidden");
+        $(".button").click(function(){
+        var färg=new Array("#aa4110","red","yellow","pink","green","grey","#002200","#ff5400","#ffe444","#fff000");
+        $(".button").click(function(){
+     $(".bodys").css("background-color",färg[parseInt(Math.random()*10)]);
+        });
+      });
+        $("#next").click(function(){
+
+          next();
+
+        });
+
+
+        $("#previous").click(function(){
+
+          prev();
+
+        });
+
+        function next () {
+
+
+
+          if($('#img').css('right')> "250px" ){
+
+            foo.animate({ right:"-=500" })
+            number = 1;
+            $("p").text(number + " av 3");
+
+
+
+          }
+          else{
+
+                  foo.animate({ right:"+=250" })
+                  number++;
+                  $("p").text(number + " av 3");
+
+          }
+
+
+      }
+      function prev () {
+
+        if($('#img').css('right')=="0px" ){
+
+          foo.animate({ right:"+=500" })
+          number = 3;
+          $("p").text(number + " av 3");
+
+
+        }
+        else{
+
+                foo.animate({ right:"-=250" })
+                number--;
+                $("p").text(number + " av 3");
+
+        }
+
+
+    }
+    });
+
+
+    </script>
+  </body>
+</html>
